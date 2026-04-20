@@ -1,23 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
+    <title>Ejercicios JavaScript</title>
+    <link rel="stylesheet" href="estilos_xd.css">
 </head>
 <body>
-<script>
-    const myAlert = document.getElementById('myAlert')
-myAlert.addEventListener('closed.bs.alert', event => {
-  // do something, for instance, explicitly move focus to the most appropriate element,
-  // so it doesn’t get lost/reset to the start of the page
-  // document.getElementById('...').focus()
-})
-.variablesuma
-</script>
-    <div> id="liveAlertPlaceholder"></div>
-<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+  
+
+    <!-- 15. Botón que ejecuta función -->
+    <section>
+        <h3>Interacción y DOM</h3>
+        <button onclick="miFuncion()">15. Botón: Lanzar Alerta</button>
+        
+        <!-- 16 y 17. Elemento para cambiar texto y color -->
+        <p id="texto">16. Este texto cambiará al presionar el botón de abajo.</p>
+        <button onclick="manipularDOM()">16 y 17. Cambiar texto y color</button>
+
+        <!-- 19. Contador -->
+        <p>Contador: <span id="valorContador">0</span></p>
+        <button onclick="aumentar()">19. Aumentar contador</button>
+    </section>
+
+    <!-- 18. Validación de formulario -->
+    <section>
+        <h3>18. Validación</h3>
+        <input type="text" id="campoEntrada" placeholder="Escribe algo...">
+        <button onclick="validarCampo()">Validar si está vacío</button>
+    </section>
+
+    <script>
+        // --- CONCEPTOS BÁSICOS (Se ven en la Consola F12) ---
+
+        // 1. Mostrar un mensaje en pantalla
+        alert("¡Punto 1: Hola Mundo!");
+
+        // 2. Variable y consola
+        let nombre = "Juan";
+        console.log("2. Valor de la variable:", nombre);
+
+        // 3. Suma de dos variables
+        let a = 5, b = 10;
+        console.log("3. Suma de a + b:", a + b);
+
+        // 4. Ser Feliz
+        console.log("4. :D El código funciona, ¡sé feliz!");
+
+        // 5. Condición mayor a 10
+        let num = 15;
+        if (num > 10) console.log("5. El número es mayor a 10");
+
+        // 6. Par o impar
+        let n = 4;
+        console.log(`6. El número ${n} es:`, n % 2 === 0 ? "Par" : "Impar");
+
+        // 7. Ciclo for (1 al 10)
+        console.log("7. Números del 1 al 10:");
+        for (let i = 1; i <= 10; i++) { console.log(i); }
+
+        // 8. Ciclo while (10 al 1)
+        console.log("8. Números del 10 al 1:");
+        let i = 10;
+        while (i >= 1) {
+            console.log(i);
+            i--;
+        }
+
+        // 9. Función que muestra mensaje
+        function mostrarMensaje() {
+            console.log("9. Mensaje desde la función");
+        }
+        mostrarMensaje();
+
+        // 10. Función que recibe dos números y regresa suma
+        function sumar(n1, n2) {
+            return n1 + n2;
+        }
+        console.log("10. Resultado suma función:", sumar(20, 30));
+
+        // 11. Arreglo y primer elemento
+        let frutas = ["Manzana", "Pera", "Plátano", "Uva", "Mango"];
+        console.log("11. Primer elemento del arreglo:", frutas[0]);
+
+        // 12. Recorrer un arreglo
+        console.log("12. Lista de frutas:");
+        frutas.forEach(fruta => console.log("- " + fruta));
+
+        // 13 y 14. Objeto y propiedad
+        const persona = { nombre: "Ana", edad: 25 };
+        console.log("14. Propiedad del objeto (nombre):", persona.nombre);
+
+        // --- FUNCIONES PARA LA INTERFAZ ---
+
+        // 15. Función clic
+        function miFuncion() {
+            alert("¡Hiciste clic en el botón!");
+        }
+
+        // 16 y 17. Cambiar contenido y color
+        function manipularDOM() {
+            let el = document.getElementById("texto");
+            el.innerText = "¡Contenido cambiado con JS!"; // 16
+            el.style.color = "red"; // 17
+        }
+
+        // 18. Validar campo vacío
+        function validarCampo() {
+            let valor = document.getElementById("campoEntrada").value;
+            if (valor === "") {
+                alert("¡El campo está vacío!");
+            } else {
+                alert("Contenido: " + valor);
+            }
+        }
+
+        // 19. Contador
+        let contador = 0;
+        function aumentar() {
+            contador++;
+            document.getElementById("valorContador").innerText = contador;
+        }
+    </script>
 </body>
 </html>

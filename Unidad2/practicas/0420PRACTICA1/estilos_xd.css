@@ -1,0 +1,12 @@
+        html {
+            background-color: lavender;
+            }
+        body { 
+             font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        section {
+             border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 8px;
+             }
+        button {
+             padding: 8px 15px; cursor: pointer;
+             }
+    

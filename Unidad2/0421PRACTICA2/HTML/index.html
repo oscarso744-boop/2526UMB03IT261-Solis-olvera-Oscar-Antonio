@@ -14,19 +14,25 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" ng-app="app" ng-controller="index">
+        <div class="row">
+            <div class="col md-3">
+              <p>{{mensaje1}}</p>
+            </div>
+           <div class="col md-3">
+                        </div>
+            <div class="col md-3">
+            </div>
+            
+        </div>
         <h1 class="text-primary">Hola, Bootstrap!</h1>
+      
         <button class="btn btn-success">Botón de ejemplo</button>
     </div>
-    <div class="row"> </div>
-    <div class="col md-3"> </div>
-    <div class="col md-3"> </div>
-    <div class="col md-3"> </div>
-    <div class="col md-3"> </div>
     <!-- JavaScript de Bootstrap (opcional, para componentes interactivos) -->
-    <script 
-        src="JAVASCRIPT/libs/angular.min.js" >
-    </script>
-    <script src="JAVASCRIPT/modulos/app.module.js"></script>
+    <script src="JS/libs/angular.min.js"> </script>
+    <script src="JS/app.module.js"></script>
+    <script src="JS/indexcontrolller.js"></script>
+     
 </body>
 </html>

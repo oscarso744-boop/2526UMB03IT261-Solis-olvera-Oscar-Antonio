@@ -5,3 +5,7 @@ function index($scope){
     $scope.mensaje1 = " hola soy una variable desde el controlador ";
     
 }
+    function mostrarAlerta() { 
+      var texto = document.getElementById("miInput").value;
+      alert("Escribiste: " + texto);
+    }

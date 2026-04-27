@@ -17,7 +17,7 @@
     <div class="container" ng-app="app" ng-controller="index">
         <div class="row">
             <div class="col md-3">
-              <p>{{mensaje1}}</p>
+              <p ng-bind="mensaje1"></p>
             </div>
            <div class="col md-3">
                         </div>
@@ -27,7 +27,23 @@
         </div>
         <h1 class="text-primary">Hola, Bootstrap!</h1>
       
-        <button class="btn btn-success">Botón de ejemplo</button>
+        <button class="hi" ng-click="mostrarAlerta()" >
+             <input type='text'ng-model='nombre'> hazclick</button>
+           
+             <div ng-app="miApp" ng-controller="miControlador">
+
+            <input type="text" ng-model="nombre" placeholder="Escribe algo aquí...">  
+            <button class="btn btn-success" ng-click="saludar()">Haz clic
+    </button>
+
+ <input type="text" id="miInput" placeholder="Escribe algo aquí...">
+  <button onclick="mostrarAlerta()">Mostrar Alerta</button>
+
+
+
+
+</div>
+       
     </div>
     <!-- JavaScript de Bootstrap (opcional, para componentes interactivos) -->
     <script src="JS/libs/angular.min.js"> </script>

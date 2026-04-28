@@ -1,5 +1,8 @@
-angular.model('app').controller('formlist', formdates);
+angular.model('app').controller('formlist', formdata);
 formdates.$inject = ($scope);
 function formdates($scope) {
-    $scope.formdates
+    $scope.formdata = {
+
+
+    }
 }
